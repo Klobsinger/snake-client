@@ -15,7 +15,26 @@ const connect = function() {
   conn.on('connect' ,() => {
     console.log('Successfully connected to game server')
     conn.write('Name: KDL')
-  })
+    // setTimeout(() => {
+    //   conn.write('Move: up');
+    // }, 1000);
+    // setTimeout(() => {
+    //   conn.write('Move: up');
+    // }, 2000);
+    // setTimeout(() => {
+    //   conn.write('Move: up');
+    // }, 3000);
+    // setTimeout(() => {
+    //   conn.write('Move: up');
+    // }, 4000);
+    // setTimeout(() => {
+    //   conn.write('Move: up');
+    // }, 5000);
+    // setTimeout(() => {
+    //   conn.write('Move: up');
+    // }, 6000);
+ })
+  
   return conn;
 };
 module.exports = {
