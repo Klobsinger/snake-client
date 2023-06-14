@@ -5,16 +5,18 @@ Snake game is a very popular video game. It is a video game concept where the pl
 This is simply a multiplayer take on the genre.
 
 Before you can run this client, you will need to be running the server side which you can download and install from here. 
+https://github.com/lighthouse-labs/snek-multiplayer
 
 ## Final Product
 
-!["screenshot description"](#)
-!["screenshot description"](#)
+!["The Game"](./docs/snake.png)
+!["Lil snake taunt"](./docs/snakeTaunt.png)
 
 
 ## Getting Started
 
 - Follow steps inside the snek server repo to run the server side
 - Run the development snake client using the `node play.js` command.
+- use node play.js after connecting to the server
 - The snake can be moved with the W,A,S,D keys
 - A random taunt can be played using the e key
