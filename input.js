@@ -1,7 +1,7 @@
 let connection;
 const constants = require("./constants");
-const setupInput = function (conn) {
-  connection = conn
+const setupInput = function(conn) {
+  connection = conn;
   const stdin = process.stdin;
   stdin.setRawMode(true);
   stdin.setEncoding("utf8");
@@ -9,7 +9,7 @@ const setupInput = function (conn) {
   stdin.on('data', handleUserInput);
   return stdin;
 };
-const handleUserInput = function (data) {
+const handleUserInput = function(data) {
   if (data === '\u0003') {
     process.exit();
   } else if (constants[data]) {
@@ -22,5 +22,5 @@ const handleUserInput = function (data) {
   }
 };
 module.exports = {
-setupInput
+  setupInput
 };

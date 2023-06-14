@@ -5,7 +5,7 @@ const constants = require("./constants");
 const connect = function() {
   const conn = net.createConnection({
     host: constants.IP,
-    port: constants.PORT 
+    port: constants.PORT
   });
   // interpret incoming data as text
   conn.setEncoding("utf8");
@@ -14,9 +14,9 @@ const connect = function() {
     console.log('Server says:', data);
   });
   conn.on('connect' ,() => {
-    console.log('Successfully connected to game server')
-    conn.write(constants.Name)
- })
+    console.log('Successfully connected to game server');
+    conn.write(constants.Name);
+  });
   
   return conn;
 };
