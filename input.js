@@ -1,5 +1,5 @@
 let connection;
-
+const constants = require("./constants");
 const setupInput = function (conn) {
   connection = conn
   const stdin = process.stdin;
@@ -12,19 +12,10 @@ const setupInput = function (conn) {
 const handleUserInput = function (data) {
   if (data === '\u0003') {
     process.exit();
-  }  
-  if (data === '\u0061') {
-    connection.write('Move: left')
+  }  else if (constants[data]) {
+    connection.write(constants[data]);
   }
-  if (data === '\u0073') {
-    connection.write('Move: down')
-  }
-  if (data === '\u0077') {
-    connection.write('Move: up')
-  }
-  if (data === '\u0064') {
-    connection.write('Move: right');
-  }
+ 
 }
 module.exports = {
 setupInput
