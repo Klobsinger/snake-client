@@ -12,11 +12,15 @@ const setupInput = function (conn) {
 const handleUserInput = function (data) {
   if (data === '\u0003') {
     process.exit();
-  }  else if (constants[data]) {
-    connection.write(constants[data]);
+  } else if (constants[data]) {
+    if (data === '\u0065') {
+      const taunt = constants[data]();
+      connection.write(taunt);
+    } else {
+      connection.write(constants[data]);
+    }
   }
- 
-}
+};
 module.exports = {
 setupInput
 };
