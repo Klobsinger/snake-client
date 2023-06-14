@@ -10,14 +10,14 @@ const setupInput = function(conn) {
   return stdin;
 };
 const handleUserInput = function(data) {
-  if (data === '\u0003') {
+  if (data === '\u0003') {   // checking if key is ctrl C then exiting the program if true
     process.exit();
-  } else if (constants[data]) {
-    if (data === '\u0065') {
-      const taunt = constants[data]();
-      connection.write(taunt);
+  } else if (constants[data]) { // checking if the key pressed matches a key in the imported constants object
+    if (data === '\u0065') { // if that key is 'e'
+      const taunt = constants[data](); // assigns the result from the random taunt function from the constants object
+      connection.write(taunt); // then writes that result to the server
     } else {
-      connection.write(constants[data]);
+      connection.write(constants[data]); // if the key is not 'e' but matches a key in the constants object it writes the value (movement) to the server
     }
   }
 };

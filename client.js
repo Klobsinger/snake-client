@@ -1,10 +1,10 @@
 // establishes a connection with the game server
 const net = require("net");
-const constants = require("./constants");
+const constants = require("./constants"); // importing constants.js object
 
 const connect = function() {
   const conn = net.createConnection({
-    host: constants.IP,
+    host: constants.IP, // using the important object rather then directly having values here
     port: constants.PORT
   });
   // interpret incoming data as text
@@ -14,8 +14,8 @@ const connect = function() {
     console.log('Server says:', data);
   });
   conn.on('connect' ,() => {
-    console.log('Successfully connected to game server');
-    conn.write(constants.Name);
+    console.log('Successfully connected to game server'); // upon connecting to the server logs a message
+    conn.write(constants.Name);  // sends the server the name from my constants object
   });
   
   return conn;
