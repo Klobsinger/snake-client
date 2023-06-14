@@ -7,7 +7,7 @@ const constants = { // my object for holding constant data all in one location
   '\u0077': 'Move: up',
   '\u0064': 'Move: right',
   '\u0065': function() { // creating a basic anonymous function that chooses a random taunt string from the array
-    const taunts = ['Say: AYE IM WALKIN HERE', 'Say: GG', 'Say: Free Armor Trimming', 'Say: Jungle Diff'];
+    const taunts = ['Say: AYE IM WALKIN HERE', 'Say: GG', 'Say: Free Armor Trimming', 'Say: Jungle Diff', 'Say: Wiggle Wiggle Wiggle', 'Say: Hissssssterical.', 'Say: Mamba Jamba.'];
     const randomIndex = Math.floor(Math.random() * taunts.length);
     const randomTaunt = taunts[randomIndex];
     return randomTaunt;
