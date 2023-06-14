@@ -15,10 +15,3 @@ const constants = {
 };
 
 module.exports = constants;
-
-
-
-// '\u0065': 'Say: AYE IM WALKIN HERE',
-// '\u0072': 'Say: GG',
-// '\u0074': 'Say: Free Armor Trimming',
-// '\u0071': 'Say: Jungle Diff'
